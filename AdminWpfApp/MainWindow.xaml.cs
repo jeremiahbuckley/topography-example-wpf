@@ -27,7 +27,15 @@ namespace AdminWpfApp
 
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
-
+			var client = new ManageTopicProxy.ManageTopicClient("BasicHttpBinding_IManageTopic");
+			var topics = client.GetTopics();
+			foreach (var t in topics)
+			{
+				System.Diagnostics.Trace.WriteLine(t);
+			}
+			var c2 = new ManageUserProxy.ManageUserClient("BasicHttpBinding_IManageUser");
+			var u = c2.CreateUser("foo", true);
+			System.Diagnostics.Trace.WriteLine(u);
 		}
 
 		private void RadioButton_Checked(object sender, RoutedEventArgs e)
