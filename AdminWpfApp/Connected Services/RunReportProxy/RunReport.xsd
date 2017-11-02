@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="TopographyAdminSvc" elementFormDefault="qualified" targetNamespace="TopographyAdminSvc" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="RunAllUsersReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="timeframe" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RunAllUsersReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RunAllUsersReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RunAllTopicsReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="timeframe" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RunAllTopicsReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RunAllTopicsReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

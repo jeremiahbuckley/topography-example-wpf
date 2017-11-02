@@ -5,20 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AdminWpfApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid Margin="0,0,81,0">
-        <ListBox HorizontalAlignment="Left" Height="127" Margin="10,125,0,0" VerticalAlignment="Top" Width="144"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,41,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="144"/>
-        <Label Content="Add Topic" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <Label Content="Existing Topics" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.495,2.235"/>
-        <Button Content="Add" HorizontalAlignment="Left" Margin="79,69,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="79,257,0,0" VerticalAlignment="Top" Width="75"/>
-        <ComboBox HorizontalAlignment="Left" Margin="180,43,0,0" VerticalAlignment="Top" Width="120"/>
-        <ComboBox HorizontalAlignment="Left" Margin="305,43,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Report" HorizontalAlignment="Left" Margin="180,12,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="Landscape" HorizontalAlignment="Left" Margin="180,90,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="Portrait" HorizontalAlignment="Left" Margin="180,70,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
-        <Button Content="Run" HorizontalAlignment="Left" Margin="180,110,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        Title="MainWindow" Height="486" Width="930">
+    <TabControl HorizontalAlignment="Left" Height="449" Margin="0,0,0,0" VerticalAlignment="Top" Width="921">
+        <TabItem Header="Users">
+            <Grid >
+                <DataGrid HorizontalAlignment="Left" Height="401" Margin="10,10,0,0" VerticalAlignment="Top" Width="895">
+                    <DataGrid.Columns>
+                        <DataGridCheckBoxColumn x:Name="Enabled"/>
+                        <DataGridTextColumn x:Name="Id"/>
+                        <DataGridTextColumn x:Name="Name"/>
+                        <DataGridTextColumn x:Name="DateJoined"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Topics">
+            <Grid >
+                <ListBox HorizontalAlignment="Left" Height="127" Margin="9,122,0,0" VerticalAlignment="Top" Width="144"
+                        ItemsSource="{Binding VisibleTopics}" SelectedValuePath="Id" DisplayMemberPath="Name" SelectedValue="{Binding CurrentTopic}" Grid.ColumnSpan="3"/>
+                <TextBox x:Name="newTopicName" HorizontalAlignment="Left" Height="23" Margin="9,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Grid.ColumnSpan="3"/>
+                <Label Content="Add Topic" HorizontalAlignment="Left" Margin="9,7,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                <Label Content="Existing Topics" HorizontalAlignment="Left" Margin="9,91,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.495,2.235" Grid.ColumnSpan="2"/>
+                <Button x:Name="TopicAdd" Content="Add" HorizontalAlignment="Left" Margin="78,66,0,0" VerticalAlignment="Top" Width="75" Click="TopicAdd_Click"/>
+                <Button x:Name="TopicDelete" Content="Delete" HorizontalAlignment="Left" Margin="78,254,0,0" VerticalAlignment="Top" Width="75" Click="TopicDelete_Click"/>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Report">
+            <Grid >
+                <ComboBox HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+                <ComboBox HorizontalAlignment="Left" Margin="141,41,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+                <Label Content="Report" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                <RadioButton Content="Landscape" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                <RadioButton Content="Portrait" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Grid.Column="1"/>
+                <Button x:Name="RunReport" Content="Run" HorizontalAlignment="Left" Margin="10,108,0,0" VerticalAlignment="Top" Width="75" Click="RunReport_Click"/>
+            </Grid>
+        </TabItem>
+    </TabControl>
 
-    </Grid>
 </Window>

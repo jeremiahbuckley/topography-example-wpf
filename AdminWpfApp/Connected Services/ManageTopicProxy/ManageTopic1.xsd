@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SvcInterfaces" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SvcInterfaces" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:3700/Service/ManageTopic?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ArrayOfTopic">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Topic" nillable="true" type="tns:Topic" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTopic" nillable="true" type="tns:ArrayOfTopic" />
+  <xs:complexType name="Topic">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Threads" nillable="true" type="q1:ArrayOfKeyValueOfintThreadzNx1Me7v" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Topic" nillable="true" type="tns:Topic" />
+  <xs:complexType name="Thread">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Comments" nillable="true" type="q2:ArrayOfKeyValueOfintCommentzNx1Me7v" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PinOrder" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Pinned" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Topic" nillable="true" type="tns:Thread" />
+      <xs:element minOccurs="0" name="TopicId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Thread" nillable="true" type="tns:Thread" />
+  <xs:complexType name="Comment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CommentStr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateTimeAdded" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ReplyToComment" nillable="true" type="tns:Comment" />
+      <xs:element minOccurs="0" name="ReplyToCommentId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Thread" nillable="true" type="tns:Thread" />
+      <xs:element minOccurs="0" name="ThreadId" type="xs:int" />
+      <xs:element minOccurs="0" name="Topic" nillable="true" type="tns:Topic" />
+      <xs:element minOccurs="0" name="TopicId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Comment" nillable="true" type="tns:Comment" />
+</xs:schema>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="704fb09f-b2af-4a5b-9679-eaa2c1f28ab3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:3700/Service/ManageUser" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ManageUser.disco" MetadataType="Disco" ID="582d3dd3-6182-46db-8eae-b95183b5439a" SourceId="1" SourceUrl="http://localhost:3700/Service/ManageUser?disco" />
+    <MetadataFile FileName="ManageUser.xsd" MetadataType="Schema" ID="45b7fbb3-b742-413d-b028-4c8d0cae229e" SourceId="1" SourceUrl="http://localhost:3700/Service/ManageUser?xsd=xsd1" />
+    <MetadataFile FileName="ManageUser1.xsd" MetadataType="Schema" ID="44dfc048-3264-4936-a7cd-103dde9f6aa5" SourceId="1" SourceUrl="http://localhost:3700/Service/ManageUser?xsd=xsd0" />
+    <MetadataFile FileName="ManageUser.wsdl" MetadataType="Wsdl" ID="1f6a11e9-19bb-4123-95d7-7df0faefc8d9" SourceId="1" SourceUrl="http://localhost:3700/Service/ManageUser?wsdl" />
+    <MetadataFile FileName="ManageUser1.wsdl" MetadataType="Wsdl" ID="71f0bd32-b814-451b-a0cd-86914d3e5043" SourceId="1" SourceUrl="http://localhost:3700/Service/ManageUser?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
