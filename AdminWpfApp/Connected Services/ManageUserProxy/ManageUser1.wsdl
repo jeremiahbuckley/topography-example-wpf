@@ -4,6 +4,8 @@
     <xsd:schema targetNamespace="TopographyAdminSvc/Imports">
       <xsd:import schemaLocation="http://localhost:3700/Service/ManageUser?xsd=xsd0" namespace="TopographyAdminSvc" />
       <xsd:import schemaLocation="http://localhost:3700/Service/ManageUser?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:3700/Service/ManageUser?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SvcInterfaces" />
+      <xsd:import schemaLocation="http://localhost:3700/Service/ManageUser?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IManageUser_EditUserName_InputMessage">
@@ -30,6 +32,12 @@
   <wsdl:message name="IManageUser_DeleteUser_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
   </wsdl:message>
+  <wsdl:message name="IManageUser_GetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="IManageUser_GetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
   <wsdl:portType name="IManageUser">
     <wsdl:operation name="EditUserName">
       <wsdl:input wsaw:Action="TopographyAdminSvc/IManageUser/EditUserName" message="tns:IManageUser_EditUserName_InputMessage" />
@@ -46,6 +54,10 @@
     <wsdl:operation name="DeleteUser">
       <wsdl:input wsaw:Action="TopographyAdminSvc/IManageUser/DeleteUser" message="tns:IManageUser_DeleteUser_InputMessage" />
       <wsdl:output wsaw:Action="TopographyAdminSvc/IManageUser/DeleteUserResponse" message="tns:IManageUser_DeleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input wsaw:Action="TopographyAdminSvc/IManageUser/GetUsers" message="tns:IManageUser_GetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="TopographyAdminSvc/IManageUser/GetUsersResponse" message="tns:IManageUser_GetUsers_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
 </wsdl:definitions>

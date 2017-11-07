@@ -9,35 +9,671 @@
 //------------------------------------------------------------------------------
 
 namespace AdminWpfApp.ManageUserProxy {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="User", Namespace="http://schemas.datacontract.org/2004/07/SvcInterfaces")]
+    [System.SerializableAttribute()]
+    public partial class User : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.Dictionary<int, AdminWpfApp.ManageUserProxy.Comment> CommentsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DateTimeJoinedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool EnabledField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] VersionField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.Dictionary<int, AdminWpfApp.ManageUserProxy.Comment> Comments {
+            get {
+                return this.CommentsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CommentsField, value) != true)) {
+                    this.CommentsField = value;
+                    this.RaisePropertyChanged("Comments");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime DateTimeJoined {
+            get {
+                return this.DateTimeJoinedField;
+            }
+            set {
+                if ((this.DateTimeJoinedField.Equals(value) != true)) {
+                    this.DateTimeJoinedField = value;
+                    this.RaisePropertyChanged("DateTimeJoined");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Enabled {
+            get {
+                return this.EnabledField;
+            }
+            set {
+                if ((this.EnabledField.Equals(value) != true)) {
+                    this.EnabledField = value;
+                    this.RaisePropertyChanged("Enabled");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte[] Version {
+            get {
+                return this.VersionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.VersionField, value) != true)) {
+                    this.VersionField = value;
+                    this.RaisePropertyChanged("Version");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Comment", Namespace="http://schemas.datacontract.org/2004/07/SvcInterfaces")]
+    [System.SerializableAttribute()]
+    public partial class Comment : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CommentStrField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DateTimeAddedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private AdminWpfApp.ManageUserProxy.Comment ReplyToCommentField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> ReplyToCommentIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private AdminWpfApp.ManageUserProxy.Thread ThreadField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ThreadIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private AdminWpfApp.ManageUserProxy.Topic TopicField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TopicIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private AdminWpfApp.ManageUserProxy.User UserField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int UserIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] VersionField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CommentStr {
+            get {
+                return this.CommentStrField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CommentStrField, value) != true)) {
+                    this.CommentStrField = value;
+                    this.RaisePropertyChanged("CommentStr");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime DateTimeAdded {
+            get {
+                return this.DateTimeAddedField;
+            }
+            set {
+                if ((this.DateTimeAddedField.Equals(value) != true)) {
+                    this.DateTimeAddedField = value;
+                    this.RaisePropertyChanged("DateTimeAdded");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public AdminWpfApp.ManageUserProxy.Comment ReplyToComment {
+            get {
+                return this.ReplyToCommentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ReplyToCommentField, value) != true)) {
+                    this.ReplyToCommentField = value;
+                    this.RaisePropertyChanged("ReplyToComment");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> ReplyToCommentId {
+            get {
+                return this.ReplyToCommentIdField;
+            }
+            set {
+                if ((this.ReplyToCommentIdField.Equals(value) != true)) {
+                    this.ReplyToCommentIdField = value;
+                    this.RaisePropertyChanged("ReplyToCommentId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public AdminWpfApp.ManageUserProxy.Thread Thread {
+            get {
+                return this.ThreadField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ThreadField, value) != true)) {
+                    this.ThreadField = value;
+                    this.RaisePropertyChanged("Thread");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ThreadId {
+            get {
+                return this.ThreadIdField;
+            }
+            set {
+                if ((this.ThreadIdField.Equals(value) != true)) {
+                    this.ThreadIdField = value;
+                    this.RaisePropertyChanged("ThreadId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public AdminWpfApp.ManageUserProxy.Topic Topic {
+            get {
+                return this.TopicField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TopicField, value) != true)) {
+                    this.TopicField = value;
+                    this.RaisePropertyChanged("Topic");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TopicId {
+            get {
+                return this.TopicIdField;
+            }
+            set {
+                if ((this.TopicIdField.Equals(value) != true)) {
+                    this.TopicIdField = value;
+                    this.RaisePropertyChanged("TopicId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public AdminWpfApp.ManageUserProxy.User User {
+            get {
+                return this.UserField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserField, value) != true)) {
+                    this.UserField = value;
+                    this.RaisePropertyChanged("User");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int UserId {
+            get {
+                return this.UserIdField;
+            }
+            set {
+                if ((this.UserIdField.Equals(value) != true)) {
+                    this.UserIdField = value;
+                    this.RaisePropertyChanged("UserId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte[] Version {
+            get {
+                return this.VersionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.VersionField, value) != true)) {
+                    this.VersionField = value;
+                    this.RaisePropertyChanged("Version");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Thread", Namespace="http://schemas.datacontract.org/2004/07/SvcInterfaces")]
+    [System.SerializableAttribute()]
+    public partial class Thread : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.Dictionary<int, AdminWpfApp.ManageUserProxy.Comment> CommentsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool EnabledField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> PinOrderField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool PinnedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private AdminWpfApp.ManageUserProxy.Thread TopicField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TopicIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] VersionField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.Dictionary<int, AdminWpfApp.ManageUserProxy.Comment> Comments {
+            get {
+                return this.CommentsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CommentsField, value) != true)) {
+                    this.CommentsField = value;
+                    this.RaisePropertyChanged("Comments");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Enabled {
+            get {
+                return this.EnabledField;
+            }
+            set {
+                if ((this.EnabledField.Equals(value) != true)) {
+                    this.EnabledField = value;
+                    this.RaisePropertyChanged("Enabled");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> PinOrder {
+            get {
+                return this.PinOrderField;
+            }
+            set {
+                if ((this.PinOrderField.Equals(value) != true)) {
+                    this.PinOrderField = value;
+                    this.RaisePropertyChanged("PinOrder");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Pinned {
+            get {
+                return this.PinnedField;
+            }
+            set {
+                if ((this.PinnedField.Equals(value) != true)) {
+                    this.PinnedField = value;
+                    this.RaisePropertyChanged("Pinned");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public AdminWpfApp.ManageUserProxy.Thread Topic {
+            get {
+                return this.TopicField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TopicField, value) != true)) {
+                    this.TopicField = value;
+                    this.RaisePropertyChanged("Topic");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TopicId {
+            get {
+                return this.TopicIdField;
+            }
+            set {
+                if ((this.TopicIdField.Equals(value) != true)) {
+                    this.TopicIdField = value;
+                    this.RaisePropertyChanged("TopicId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte[] Version {
+            get {
+                return this.VersionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.VersionField, value) != true)) {
+                    this.VersionField = value;
+                    this.RaisePropertyChanged("Version");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Topic", Namespace="http://schemas.datacontract.org/2004/07/SvcInterfaces")]
+    [System.SerializableAttribute()]
+    public partial class Topic : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool EnabledField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.Dictionary<int, AdminWpfApp.ManageUserProxy.Thread> ThreadsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] VersionField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Enabled {
+            get {
+                return this.EnabledField;
+            }
+            set {
+                if ((this.EnabledField.Equals(value) != true)) {
+                    this.EnabledField = value;
+                    this.RaisePropertyChanged("Enabled");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.Dictionary<int, AdminWpfApp.ManageUserProxy.Thread> Threads {
+            get {
+                return this.ThreadsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ThreadsField, value) != true)) {
+                    this.ThreadsField = value;
+                    this.RaisePropertyChanged("Threads");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte[] Version {
+            get {
+                return this.VersionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.VersionField, value) != true)) {
+                    this.VersionField = value;
+                    this.RaisePropertyChanged("Version");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="TopographyAdminSvc", ConfigurationName="ManageUserProxy.IManageUser")]
     public interface IManageUser {
         
         [System.ServiceModel.OperationContractAttribute(Action="TopographyAdminSvc/IManageUser/EditUserName", ReplyAction="TopographyAdminSvc/IManageUser/EditUserNameResponse")]
-        string EditUserName(string uid, string name);
+        bool EditUserName(int uid, string name);
         
         [System.ServiceModel.OperationContractAttribute(Action="TopographyAdminSvc/IManageUser/EditUserName", ReplyAction="TopographyAdminSvc/IManageUser/EditUserNameResponse")]
-        System.Threading.Tasks.Task<string> EditUserNameAsync(string uid, string name);
+        System.Threading.Tasks.Task<bool> EditUserNameAsync(int uid, string name);
         
         [System.ServiceModel.OperationContractAttribute(Action="TopographyAdminSvc/IManageUser/UserEnableDisable", ReplyAction="TopographyAdminSvc/IManageUser/UserEnableDisableResponse")]
-        bool UserEnableDisable(string uid, bool enable);
+        bool UserEnableDisable(int uid, bool enable);
         
         [System.ServiceModel.OperationContractAttribute(Action="TopographyAdminSvc/IManageUser/UserEnableDisable", ReplyAction="TopographyAdminSvc/IManageUser/UserEnableDisableResponse")]
-        System.Threading.Tasks.Task<bool> UserEnableDisableAsync(string uid, bool enable);
+        System.Threading.Tasks.Task<bool> UserEnableDisableAsync(int uid, bool enable);
         
         [System.ServiceModel.OperationContractAttribute(Action="TopographyAdminSvc/IManageUser/CreateUser", ReplyAction="TopographyAdminSvc/IManageUser/CreateUserResponse")]
-        string CreateUser(string name, bool isEnabled);
+        int CreateUser(string name, bool isEnabled);
         
         [System.ServiceModel.OperationContractAttribute(Action="TopographyAdminSvc/IManageUser/CreateUser", ReplyAction="TopographyAdminSvc/IManageUser/CreateUserResponse")]
-        System.Threading.Tasks.Task<string> CreateUserAsync(string name, bool isEnabled);
+        System.Threading.Tasks.Task<int> CreateUserAsync(string name, bool isEnabled);
         
         [System.ServiceModel.OperationContractAttribute(Action="TopographyAdminSvc/IManageUser/DeleteUser", ReplyAction="TopographyAdminSvc/IManageUser/DeleteUserResponse")]
-        bool DeleteUser(string uid);
+        bool DeleteUser(int uid);
         
         [System.ServiceModel.OperationContractAttribute(Action="TopographyAdminSvc/IManageUser/DeleteUser", ReplyAction="TopographyAdminSvc/IManageUser/DeleteUserResponse")]
-        System.Threading.Tasks.Task<bool> DeleteUserAsync(string uid);
+        System.Threading.Tasks.Task<bool> DeleteUserAsync(int uid);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="TopographyAdminSvc/IManageUser/GetUsers", ReplyAction="TopographyAdminSvc/IManageUser/GetUsersResponse")]
+        AdminWpfApp.ManageUserProxy.User[] GetUsers();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="TopographyAdminSvc/IManageUser/GetUsers", ReplyAction="TopographyAdminSvc/IManageUser/GetUsersResponse")]
+        System.Threading.Tasks.Task<AdminWpfApp.ManageUserProxy.User[]> GetUsersAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -67,36 +703,44 @@ namespace AdminWpfApp.ManageUserProxy {
                 base(binding, remoteAddress) {
         }
         
-        public string EditUserName(string uid, string name) {
+        public bool EditUserName(int uid, string name) {
             return base.Channel.EditUserName(uid, name);
         }
         
-        public System.Threading.Tasks.Task<string> EditUserNameAsync(string uid, string name) {
+        public System.Threading.Tasks.Task<bool> EditUserNameAsync(int uid, string name) {
             return base.Channel.EditUserNameAsync(uid, name);
         }
         
-        public bool UserEnableDisable(string uid, bool enable) {
+        public bool UserEnableDisable(int uid, bool enable) {
             return base.Channel.UserEnableDisable(uid, enable);
         }
         
-        public System.Threading.Tasks.Task<bool> UserEnableDisableAsync(string uid, bool enable) {
+        public System.Threading.Tasks.Task<bool> UserEnableDisableAsync(int uid, bool enable) {
             return base.Channel.UserEnableDisableAsync(uid, enable);
         }
         
-        public string CreateUser(string name, bool isEnabled) {
+        public int CreateUser(string name, bool isEnabled) {
             return base.Channel.CreateUser(name, isEnabled);
         }
         
-        public System.Threading.Tasks.Task<string> CreateUserAsync(string name, bool isEnabled) {
+        public System.Threading.Tasks.Task<int> CreateUserAsync(string name, bool isEnabled) {
             return base.Channel.CreateUserAsync(name, isEnabled);
         }
         
-        public bool DeleteUser(string uid) {
+        public bool DeleteUser(int uid) {
             return base.Channel.DeleteUser(uid);
         }
         
-        public System.Threading.Tasks.Task<bool> DeleteUserAsync(string uid) {
+        public System.Threading.Tasks.Task<bool> DeleteUserAsync(int uid) {
             return base.Channel.DeleteUserAsync(uid);
+        }
+        
+        public AdminWpfApp.ManageUserProxy.User[] GetUsers() {
+            return base.Channel.GetUsers();
+        }
+        
+        public System.Threading.Tasks.Task<AdminWpfApp.ManageUserProxy.User[]> GetUsersAsync() {
+            return base.Channel.GetUsersAsync();
         }
     }
 }

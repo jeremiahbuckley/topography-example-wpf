@@ -40,6 +40,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="TopographyAdminSvc/IManageUser/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="ManageUser">
     <wsdl:port name="BasicHttpBinding_IManageUser" binding="tns:BasicHttpBinding_IManageUser">

@@ -119,12 +119,21 @@
     <None Include="Connected Services\ManageTopicProxy\ManageTopic3.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\ManageUserProxy\AdminWpfApp.ManageUserProxy.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ManageUserProxy\ManageUser.wsdl" />
     <None Include="Connected Services\ManageUserProxy\ManageUser.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ManageUserProxy\ManageUser1.wsdl" />
     <None Include="Connected Services\ManageUserProxy\ManageUser1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ManageUserProxy\ManageUser2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ManageUserProxy\ManageUser21.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\RunReportProxy\RunReport.wsdl" />
